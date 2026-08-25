@@ -907,3 +907,32 @@ h1 {
     font-size: 22px !important;
   }
 }
+/* ===== IPHONE TEXT SIZE FIX ===== */
+
+html {
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+}
+
+body {
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+}
+
+@media screen and (max-width: 650px) {
+  .card h1 {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    font-size: 22px !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.02em !important;
+
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+  }
+}
