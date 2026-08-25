@@ -936,3 +936,9 @@ body {
     text-size-adjust: 100% !important;
   }
 }
+@media (max-width: 650px) {
+  .card h1 {
+    font-size: 14px !important;
+    color: red !important;
+  }
+}
