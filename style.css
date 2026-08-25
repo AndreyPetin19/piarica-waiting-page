@@ -1,416 +1,391 @@
-/* =========================================
-   ФИНАЛЬНАЯ КОМПАКТНАЯ АДАПТАЦИЯ ЗАГЛУШКИ
-========================================= */
-
-/* ---------- ПК ---------- */
-
-.page {
-  width: min(100%, 940px);
-}
-
-.card {
-  min-height: auto;
-
-  padding: 46px 52px;
-
-  border-radius: 28px;
-
-  gap: 42px;
-}
-
-.logo {
-  width: 52px;
-  height: 52px;
-}
-
-.brand strong {
-  font-size: 23px;
-}
-
-.content {
-  max-width: 760px;
-}
-
-.status {
-  margin-bottom: 17px;
-}
-
-h1 {
-  max-width: 720px;
-
-  font-size: clamp(42px, 5.2vw, 66px);
-  line-height: 0.98;
-}
-
-.description {
-  max-width: 650px;
-
-  margin-top: 20px;
-
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-.contact-title {
-  margin-top: 27px;
-}
-
-.contacts {
-  margin-top: 13px;
-}
-
-.button {
-  min-height: 48px;
-
-  padding-left: 18px;
-  padding-right: 18px;
-}
-
-.bottom {
-  padding-top: 20px;
-}
-
-
-/* ---------- НОУТБУКИ / НЕБОЛЬШИЕ ЭКРАНЫ ---------- */
-
-@media (max-width: 1000px) {
-  body {
-    padding: 24px;
-  }
-
-  .page {
-    width: min(100%, 860px);
-  }
-
-  .card {
-    padding: 40px 42px;
-
-    gap: 36px;
-  }
-
-  h1 {
-    font-size: clamp(40px, 6vw, 58px);
-  }
-}
-
-
-/* ---------- ПЛАНШЕТ / ТЕЛЕФОН ---------- */
-
-@media (max-width: 650px) {
-  body {
-    min-height: 100svh;
-
-    padding: 12px;
-
-    align-items: flex-start;
-  }
-
-  .page {
-    width: 100%;
-  }
-
-  .card {
-    width: 100%;
-
-    min-height: auto;
-
-    margin: 0;
-
-    padding: 22px 20px;
-
-    border-radius: 22px;
-
-    gap: 32px;
-  }
-
-  .top {
-    gap: 12px;
-  }
-
-  .logo {
-    width: 44px;
-    height: 44px;
-
-    padding: 5px;
-
-    border-radius: 12px;
-  }
-
-  .brand {
-    gap: 2px;
-  }
-
-  .brand strong {
-    font-size: 19px;
-  }
-
-  .brand span {
-    max-width: 220px;
-
-    font-size: 8px;
-    line-height: 1.35;
-
-    letter-spacing: 0.07em;
-  }
-
-  .status {
-    margin-bottom: 15px;
-
-    padding: 7px 10px;
-
-    font-size: 10px;
-  }
-
-  h1 {
-    max-width: 100%;
-
-    font-size: clamp(36px, 11vw, 48px);
-    line-height: 0.98;
-
-    letter-spacing: -0.05em;
-  }
-
-  .description {
-    max-width: 100%;
-
-    margin-top: 18px;
-
-    font-size: 15px;
-    line-height: 1.55;
-  }
-
-  .contact-title {
-    margin-top: 25px;
-
-    font-size: 13px;
-  }
-
-  .contacts {
-    margin-top: 12px;
-
-    display: grid;
-    grid-template-columns: 1fr;
-
-    gap: 9px;
-  }
-
-  .button {
-    width: 100%;
-
-    min-height: 46px;
-
-    padding: 0 15px;
-
-    font-size: 13px;
-  }
-
-  .bottom {
-    padding-top: 18px;
-
-    flex-direction: column;
-    align-items: flex-start;
-
-    gap: 8px;
-
-    font-size: 11px;
-  }
-}
-
-
-/* ---------- ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ ---------- */
-
-@media (max-width: 380px) {
-  body {
-    padding: 8px;
-  }
-
-  .card {
-    padding: 19px 17px;
-
-    border-radius: 19px;
-
-    gap: 27px;
-  }
-
-  .logo {
-    width: 40px;
-    height: 40px;
-  }
-
-  .brand strong {
-    font-size: 17px;
-  }
-
-  .brand span {
-    font-size: 7px;
-  }
-
-  h1 {
-    font-size: 34px;
-  }
-
-  .description {
-    font-size: 14px;
-  }
-
-  .button {
-    min-height: 44px;
-  }
-}
-
-
-/* ---------- НИЗКИЕ ЭКРАНЫ ПК ---------- */
-
-@media (min-width: 651px) and (max-height: 750px) {
-  body {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .card {
-    padding-top: 34px;
-    padding-bottom: 34px;
-
-    gap: 30px;
-  }
-
-  h1 {
-    font-size: clamp(40px, 5vw, 58px);
-  }
-
-  .description {
-    margin-top: 17px;
-  }
-
-  .contact-title {
-    margin-top: 22px;
-  }
-}
 /* =====================================================
-   PIARICA — ФИНАЛЬНАЯ АДАПТАЦИЯ СТРАНИЦЫ РЕКОНСТРУКЦИИ
+   PIARICA RECONSTRUCTION PAGE
+   CLEAN FINAL CSS
 ===================================================== */
 
-/* =====================
-   ОБЩИЕ НАСТРОЙКИ
-===================== */
+:root {
+  --bg: #080b09;
+  --bg-bottom: #0b100d;
 
-html,
-body {
-  margin: 0;
+  --text-main: #f3f5f4;
+  --text-secondary: #a8b0ac;
+
+  --accent: #9cff3b;
+
+  --line: rgba(255, 255, 255, 0.08);
+  --card-bg: rgba(255, 255, 255, 0.035);
+
+  --font:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
   width: 100%;
   min-height: 100%;
+
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
+  margin: 0;
+
+  width: 100%;
   min-height: 100vh;
+  min-height: 100svh;
+
+  padding: 24px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 28px;
-
   overflow-x: hidden;
+
+  font-family: var(--font);
+
+  color: var(--text-main);
+
+  background:
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(156, 255, 59, 0.11),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(156, 255, 59, 0.055),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      var(--bg) 0%,
+      var(--bg-bottom) 100%
+    );
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 
-/* =====================
-   ПК
-===================== */
+/* =====================================================
+   СТРОГО ДВА ТИПА ТЕКСТА
+===================================================== */
+
+/*
+   ТИП 1
+   Белый + Inter 800
+
+   Используется только для:
+   - названия компании
+   - главного заголовка
+   - текста кнопок
+*/
+
+h1,
+.brand strong,
+.button {
+  font-family: var(--font);
+
+  color: var(--text-main);
+
+  font-weight: 800;
+}
+
+
+/*
+   ТИП 2
+   Серый + Inter 500
+
+   Используется для абсолютно всей
+   остальной информации.
+*/
+
+.brand span,
+.status,
+.description,
+.contact-title,
+.bottom,
+.bottom strong {
+  font-family: var(--font);
+
+  color: var(--text-secondary);
+
+  font-weight: 500;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+
+/* =====================================================
+   ОСНОВНОЙ КОНТЕЙНЕР
+===================================================== */
 
 .page {
-  width: min(100%, 820px);
+  width: min(100%, 760px);
+
   margin: 0 auto;
 }
 
+
+/* =====================================================
+   КАРТОЧКА
+===================================================== */
+
 .card {
+  position: relative;
+
   width: 100%;
   min-height: auto;
 
-  padding: 38px 44px;
+  padding: 34px 38px;
 
-  border-radius: 26px;
+  display: flex;
+  flex-direction: column;
 
-  gap: 32px;
+  gap: 28px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  border: 1px solid var(--line);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.02)
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.35);
 }
 
 
-/* ---------- ЛОГО ---------- */
+/* декоративное свечение */
+
+.card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  right: -130px;
+  top: -140px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(156, 255, 59, 0.11);
+
+  filter: blur(45px);
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   ЛОГОТИП
+===================================================== */
 
 .top {
-  gap: 13px;
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
 }
 
 .logo {
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
 
-  padding: 6px;
+  flex: 0 0 46px;
 
-  border-radius: 13px;
+  padding: 5px;
+
+  object-fit: contain;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid var(--line);
 }
+
+.brand {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+
+/* ТИП 1 */
 
 .brand strong {
-  font-size: 21px;
+  font-size: 20px;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.025em;
 }
+
+
+/* ТИП 2 */
 
 .brand span {
-  font-size: 9px;
-  letter-spacing: 0.08em;
+  font-size: 10px;
+
+  line-height: 1.35;
 }
 
 
-/* ---------- ОСНОВНОЙ КОНТЕНТ ---------- */
+/* =====================================================
+   CONTENT
+===================================================== */
 
 .content {
-  max-width: 680px;
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 650px;
 }
+
+
+/* =====================================================
+   STATUS
+===================================================== */
 
 .status {
-  margin-bottom: 16px;
+  width: fit-content;
 
-  padding: 7px 11px;
+  margin-bottom: 15px;
 
-  font-size: 10px;
+  padding: 7px 10px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  border: 1px solid var(--line);
 }
 
 
-/* ---------- ЗАГОЛОВОК ---------- */
+/* зелёный используется только как графический акцент */
+
+.status::before {
+  content: "";
+
+  width: 6px;
+  height: 6px;
+
+  flex: 0 0 6px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  box-shadow:
+    0 0 12px rgba(156, 255, 59, 0.5);
+}
+
+
+/* =====================================================
+   ГЛАВНЫЙ ЗАГОЛОВОК
+===================================================== */
 
 h1 {
-  max-width: 650px;
+  width: 100%;
+  max-width: 620px;
 
   margin: 0;
 
-  font-size: clamp(42px, 4.3vw, 58px);
-  line-height: 0.97;
+  font-size: 48px;
 
-  letter-spacing: -0.055em;
+  line-height: 0.99;
+
+  letter-spacing: -0.045em;
+
+  white-space: normal;
+
+  word-break: normal;
+  overflow-wrap: normal;
+
+  hyphens: none;
 }
 
 
-/* ---------- ОПИСАНИЕ ---------- */
+/* =====================================================
+   ОПИСАНИЕ
+===================================================== */
 
 .description {
-  max-width: 600px;
+  width: 100%;
+  max-width: 590px;
 
-  margin-top: 18px;
+  margin: 17px 0 0;
 
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 15px;
+
+  line-height: 1.55;
 }
 
 
-/* ---------- КОНТАКТЫ ---------- */
+/* =====================================================
+   КОНТАКТЫ
+===================================================== */
 
 .contact-title {
-  margin-top: 24px;
-  margin-bottom: 0;
+  margin: 22px 0 0;
 
-  font-size: 12px;
+  font-size: 13px;
+
+  line-height: 1.4;
 }
 
 .contacts {
+  width: 100%;
+
   margin-top: 11px;
 
   display: flex;
@@ -419,54 +394,133 @@ h1 {
   gap: 8px;
 }
 
-.button {
-  min-height: 44px;
 
-  padding: 0 16px;
+/* =====================================================
+   КНОПКИ
+===================================================== */
+
+.button {
+  min-height: 43px;
+
+  padding: 0 15px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  border: 1px solid var(--line);
+
+  background:
+    rgba(255, 255, 255, 0.04);
 
   font-size: 12px;
+
+  letter-spacing: 0;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+
+  background:
+    rgba(255, 255, 255, 0.07);
 }
 
 
-/* ---------- НИЗ ---------- */
+/* WhatsApp:
+   текст остаётся БЕЛЫМ —
+   третьего цвета текста не появляется */
 
-.bottom {
-  padding-top: 18px;
+.button-primary {
+  color: var(--text-main);
 
-  font-size: 11px;
+  background:
+    rgba(156, 255, 59, 0.2);
+
+  border-color:
+    rgba(156, 255, 59, 0.45);
+
+  box-shadow:
+    0 12px 30px rgba(156, 255, 59, 0.1);
+}
+
+.button-primary:hover {
+  background:
+    rgba(156, 255, 59, 0.26);
 }
 
 
 /* =====================================================
-   НОУТБУК
+   FOOTER В КАРТОЧКЕ
 ===================================================== */
 
-@media (max-width: 950px) and (min-width: 651px) {
+.bottom {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+
+  padding-top: 16px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.07);
+
+  font-size: 10px;
+
+  line-height: 1.45;
+}
+
+
+/* специально НЕ делаем компанию белой */
+
+.bottom strong {
+  font-size: inherit;
+  font-weight: 500;
+}
+
+
+/* =====================================================
+   НОУТБУКИ
+===================================================== */
+
+@media (max-width: 900px) and (min-width: 651px) {
 
   body {
-    padding: 24px;
+    padding: 20px;
   }
 
   .page {
-    width: min(100%, 760px);
+    width: min(100%, 700px);
   }
 
   .card {
-    padding: 34px 38px;
+    padding: 30px 34px;
 
-    gap: 28px;
+    gap: 25px;
   }
 
   h1 {
-    max-width: 600px;
+    max-width: 570px;
 
-    font-size: 50px;
+    font-size: 44px;
   }
 
   .description {
-    max-width: 570px;
+    max-width: 550px;
 
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
@@ -477,24 +531,13 @@ h1 {
 
 @media (max-width: 650px) {
 
-  html,
-  body {
-    width: 100%;
-    min-height: 100%;
-  }
-
   body {
     min-height: 100svh;
 
+    padding: 10px;
+
     display: block;
-
-    padding: 14px;
-
-    overflow-x: hidden;
   }
-
-
-  /* ---------- КАРТОЧКА ---------- */
 
   .page {
     width: 100%;
@@ -503,180 +546,148 @@ h1 {
     margin: 0 auto;
   }
 
+
+  /* Рамка всегда видна */
+
   .card {
     width: 100%;
-    max-width: 100%;
 
     min-height: auto;
 
     margin: 0;
 
-    padding: 22px 20px 18px;
+    padding: 18px 16px 15px;
 
-    border-radius: 22px;
+    gap: 21px;
 
-    gap: 27px;
+    border-radius: 19px;
 
     overflow: hidden;
   }
 
 
-  /* ---------- ЛОГО ---------- */
+  /* Logo */
 
   .top {
-    display: flex;
-
-    align-items: center;
-
-    gap: 11px;
+    gap: 9px;
   }
 
   .logo {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
 
-    flex: 0 0 42px;
+    flex: 0 0 38px;
 
-    padding: 5px;
+    padding: 4px;
 
-    border-radius: 11px;
-  }
-
-  .brand {
-    min-width: 0;
+    border-radius: 10px;
   }
 
   .brand strong {
-    display: block;
+    font-size: 16px;
 
-    font-size: 18px;
     line-height: 1.1;
-
-    white-space: nowrap;
   }
 
   .brand span {
-    display: block;
+    font-size: 8px;
 
-    margin-top: 3px;
-
-    max-width: 230px;
-
-    font-size: 7px;
     line-height: 1.3;
-
-    letter-spacing: 0.06em;
   }
 
 
-  /* ---------- КОНТЕНТ ---------- */
-
-  .content {
-    width: 100%;
-    max-width: 100%;
-  }
-
-
-  /* ---------- СТАТУС ---------- */
+  /* Status */
 
   .status {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 
-    padding: 7px 10px;
+    padding: 6px 9px;
+
+    gap: 7px;
 
     font-size: 9px;
-
-    letter-spacing: 0.08em;
-  }
-
-  .status::before {
-    width: 6px;
-    height: 6px;
   }
 
 
-  /* ---------- ЗАГОЛОВОК ---------- */
+  /* =================================================
+     ГЛАВНЫЙ FIX:
+     РЕКОНСТРУКЦИИ ПОМЕЩАЕТСЯ ЦЕЛИКОМ
+  ================================================= */
 
   h1 {
     width: 100%;
     max-width: 100%;
 
-    margin: 0;
+    font-size: 27px;
 
-    font-size: clamp(35px, 10vw, 45px);
+    line-height: 1.02;
 
-    line-height: 0.97;
+    letter-spacing: -0.035em;
 
-    letter-spacing: -0.055em;
+    white-space: normal;
 
-    overflow-wrap: normal;
     word-break: normal;
+    overflow-wrap: normal;
+
     hyphens: none;
+
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
 
-  /* ---------- ОПИСАНИЕ ---------- */
+  /* Description */
 
   .description {
     width: 100%;
     max-width: 100%;
 
-    margin: 17px 0 0;
+    margin-top: 13px;
 
-    font-size: 14px;
-    line-height: 1.48;
+    font-size: 12px;
+
+    line-height: 1.5;
   }
 
 
-  /* ---------- КОНТАКТЫ ---------- */
+  /* Contacts */
 
   .contact-title {
-    margin-top: 22px;
+    margin-top: 17px;
 
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .contacts {
-    width: 100%;
-
-    margin-top: 11px;
+    margin-top: 9px;
 
     display: flex;
     flex-direction: column;
 
-    gap: 8px;
+    gap: 7px;
   }
 
   .button {
     width: 100%;
 
-    min-height: 44px;
+    min-height: 39px;
 
-    padding: 0 14px;
+    padding: 0 12px;
 
-    border-radius: 999px;
-
-    font-size: 12px;
+    font-size: 10px;
   }
 
 
-  /* ---------- FOOTER ---------- */
+  /* Bottom */
 
   .bottom {
-    width: 100%;
+    padding-top: 13px;
 
-    padding-top: 16px;
+    gap: 10px;
 
-    display: flex;
-    flex-direction: row;
+    font-size: 8px;
 
-    justify-content: space-between;
-    align-items: flex-end;
-
-    gap: 15px;
-
-    font-size: 9px;
-    line-height: 1.4;
+    line-height: 1.35;
   }
 
   .bottom > div:last-child {
@@ -688,104 +699,129 @@ h1 {
 
 
 /* =====================================================
-   IPHONE / УЗКИЕ ЭКРАНЫ
+   IPHONE / ЭКРАНЫ ДО 430px
 ===================================================== */
 
 @media (max-width: 430px) {
-
-  body {
-    padding: 10px;
-  }
-
-  .card {
-    padding: 20px 18px 16px;
-
-    border-radius: 20px;
-
-    gap: 24px;
-  }
-
-  .logo {
-    width: 40px;
-    height: 40px;
-
-    flex-basis: 40px;
-  }
-
-  .brand strong {
-    font-size: 17px;
-  }
-
-  .brand span {
-    font-size: 6.5px;
-  }
-
-  .status {
-    margin-bottom: 15px;
-
-    font-size: 8.5px;
-  }
-
-  h1 {
-    font-size: clamp(33px, 9.6vw, 41px);
-    line-height: 0.98;
-  }
-
-  .description {
-    margin-top: 15px;
-
-    font-size: 13px;
-    line-height: 1.48;
-  }
-
-  .contact-title {
-    margin-top: 20px;
-
-    font-size: 11px;
-  }
-
-  .button {
-    min-height: 42px;
-
-    font-size: 11px;
-  }
-
-  .bottom {
-    font-size: 8px;
-  }
-}
-
-
-/* =====================================================
-   ОЧЕНЬ УЗКИЕ ТЕЛЕФОНЫ
-===================================================== */
-
-@media (max-width: 370px) {
 
   body {
     padding: 8px;
   }
 
   .card {
-    padding: 18px 15px 15px;
+    padding:
+      16px
+      14px
+      14px;
+
+    gap: 19px;
 
     border-radius: 18px;
   }
 
-  h1 {
-    font-size: 32px;
-  }
+  .logo {
+    width: 36px;
+    height: 36px;
 
-  .description {
-    font-size: 12px;
+    flex-basis: 36px;
   }
 
   .brand strong {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .brand span {
-    max-width: 190px;
+    font-size: 7px;
+  }
+
+  .status {
+    margin-bottom: 11px;
+
+    font-size: 8px;
+  }
+
+
+  /*
+     На типичном iPhone:
+     viewport ~390px
+     - 16px body
+     - 28px card padding
+
+     внутреннее пространство ~346px.
+
+     24px гарантированно помещает
+     слово "реконструкции".
+  */
+
+  h1 {
+    font-size: 24px;
+
+    line-height: 1.04;
+
+    letter-spacing: -0.025em;
+  }
+
+  .description {
+    margin-top: 12px;
+
+    font-size: 11px;
+
+    line-height: 1.48;
+  }
+
+  .contact-title {
+    margin-top: 15px;
+
+    font-size: 9px;
+  }
+
+  .button {
+    min-height: 37px;
+
+    font-size: 9px;
+  }
+
+  .bottom {
+    padding-top: 11px;
+
+    font-size: 7.5px;
+  }
+}
+
+
+/* =====================================================
+   ОЧЕНЬ УЗКИЕ ЭКРАНЫ
+===================================================== */
+
+@media (max-width: 360px) {
+
+  body {
+    padding: 6px;
+  }
+
+  .card {
+    padding:
+      14px
+      12px
+      12px;
+
+    gap: 17px;
+
+    border-radius: 16px;
+  }
+
+  h1 {
+    font-size: 22px;
+
+    letter-spacing: -0.02em;
+  }
+
+  .description {
+    font-size: 10px;
+  }
+
+  .button {
+    min-height: 36px;
   }
 
   .bottom {
@@ -793,7 +829,7 @@ h1 {
 
     align-items: flex-start;
 
-    gap: 6px;
+    gap: 5px;
   }
 
   .bottom > div:last-child {
@@ -806,139 +842,157 @@ h1 {
    НИЗКИЕ ЭКРАНЫ ПК
 ===================================================== */
 
-@media (min-width: 651px) and (max-height: 760px) {
+@media (min-width: 651px) and (max-height: 720px) {
 
   body {
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 
   .page {
-    width: min(100%, 760px);
+    width: min(100%, 700px);
   }
 
   .card {
-    padding: 30px 36px;
+    padding: 27px 32px;
 
-    gap: 24px;
-  }
-
-  .logo {
-    width: 44px;
-    height: 44px;
+    gap: 22px;
   }
 
   h1 {
-    font-size: 48px;
+    font-size: 42px;
   }
 
   .description {
-    margin-top: 14px;
+    margin-top: 13px;
 
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .contact-title {
-    margin-top: 18px;
+    margin-top: 16px;
   }
 
   .button {
-    min-height: 40px;
+    min-height: 38px;
   }
 
   .bottom {
-    padding-top: 14px;
-  }
-}
-/* ===== HARD FIX MOBILE TITLE ===== */
-
-@media (max-width: 650px) {
-  .card h1 {
-    width: 100% !important;
-    max-width: 100% !important;
-
-    font-size: 32px !important;
-    line-height: 1.02 !important;
-    letter-spacing: -0.045em !important;
-
-    white-space: normal !important;
-
-    overflow: visible !important;
-
-    word-break: normal !important;
-    overflow-wrap: normal !important;
-    hyphens: none !important;
+    padding-top: 12px;
   }
 }
 
-@media (max-width: 430px) {
-  .card h1 {
-    font-size: 30px !important;
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
   }
 }
+/* =========================================
+   PIARICA — ФИНАЛЬНОЕ ВЫРАВНИВАНИЕ ТЕКСТА
+========================================= */
 
-@media (max-width: 370px) {
-  .card h1 {
-    font-size: 27px !important;
-    letter-spacing: -0.035em !important;
-  }
-}
-/* ФИНАЛЬНЫЙ РАЗМЕР ЗАГОЛОВКА НА ТЕЛЕФОНЕ */
-
-@media (max-width: 650px) {
-  h1,
-  .card h1 {
-    font-size: 26px !important;
-    line-height: 1.05 !important;
-    letter-spacing: -0.03em !important;
-  }
-}
-
-@media (max-width: 430px) {
-  h1,
-  .card h1 {
-    font-size: 24px !important;
-  }
+/* Главный белый текст */
+h1,
+.brand strong,
+.status,
+.contact-title,
+.button,
+.button-primary,
+.bottom strong {
+  color: #f3f5f4 !important;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  text-transform: none !important;
 }
 
-@media (max-width: 370px) {
-  h1,
-  .card h1 {
-    font-size: 22px !important;
-  }
-}
-/* ===== IPHONE TEXT SIZE FIX ===== */
 
-html {
-  -webkit-text-size-adjust: 100% !important;
-  text-size-adjust: 100% !important;
-}
-
-body {
-  -webkit-text-size-adjust: 100% !important;
-  text-size-adjust: 100% !important;
+/* Весь вторичный текст */
+.description,
+.brand span,
+.bottom {
+  color: #a8b0ac !important;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
 }
 
-@media screen and (max-width: 650px) {
-  .card h1 {
-    width: 100% !important;
-    max-width: 100% !important;
 
-    font-size: 22px !important;
-    line-height: 1.08 !important;
-    letter-spacing: -0.02em !important;
+/* "Сайт обновляется" — белым */
+.status {
+  color: #f3f5f4 !important;
+  font-weight: 800 !important;
 
-    white-space: normal !important;
-    word-break: normal !important;
-    overflow-wrap: normal !important;
-
-    -webkit-text-size-adjust: 100% !important;
-    text-size-adjust: 100% !important;
-  }
+  background: rgba(255,255,255,.04) !important;
+  border-color: rgba(255,255,255,.09) !important;
 }
-@media (max-width: 650px) {
-  .card h1 {
-    font-size: 14px !important;
-    color: red !important;
-  }
+
+
+/* зелёной остаётся только точка */
+.status::before {
+  background: #9cff3b !important;
+}
+
+
+/* "По вопросам и проектам" — белым */
+.contact-title {
+  color: #f3f5f4 !important;
+  font-weight: 800 !important;
+}
+
+
+/* Все кнопки — белый текст */
+.button {
+  color: #f3f5f4 !important;
+  font-weight: 800 !important;
+}
+
+
+/* WhatsApp-кнопка: зелёный фон, БЕЛЫЙ текст */
+.button-primary {
+  color: #f3f5f4 !important;
+
+  background: rgba(156,255,59,.18) !important;
+  border-color: rgba(156,255,59,.42) !important;
+}
+
+
+/* Обычные кнопки */
+.button:not(.button-primary) {
+  color: #f3f5f4 !important;
+}
+
+
+/* Footer */
+.bottom {
+  color: #a8b0ac !important;
+}
+
+.bottom strong {
+  color: #f3f5f4 !important;
+  font-weight: 800 !important;
+}
+
+
+/* Подпись под логотипом остаётся серой */
+.brand span {
+  color: #a8b0ac !important;
+  font-weight: 500 !important;
+}
+
+
+/* Основной описательный текст — серый */
+.description {
+  color: #a8b0ac !important;
+  font-weight: 500 !important;
 }
