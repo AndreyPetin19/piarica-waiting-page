@@ -850,3 +850,36 @@ h1 {
     padding-top: 14px;
   }
 }
+/* ===== HARD FIX MOBILE TITLE ===== */
+
+@media (max-width: 650px) {
+  .card h1 {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    font-size: 32px !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.045em !important;
+
+    white-space: normal !important;
+
+    overflow: visible !important;
+
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .card h1 {
+    font-size: 30px !important;
+  }
+}
+
+@media (max-width: 370px) {
+  .card h1 {
+    font-size: 27px !important;
+    letter-spacing: -0.035em !important;
+  }
+}
